@@ -18,3 +18,7 @@ this.
 
 What is the time complexity of your implementation (worst-case $\Theta$)? Add
 your answer, including your reasoning, to this markdown file.
+
+The worst case time complexity of this code is $O(n)$ where n is the size of the input array. The 'countMatches' function has a complexity of $O(n)$ where $n$ is the size of the input array. The 'countMatchesAsync' function divides the input array into 4 slices and calls the 'countMatches' function 4 times, executing each call/slice asynchronously. Therefore the input array in the 'countMatches' function will be of size = $n/4$. However even though we execute each call asynchronously, the total amount of work done in the 'countMatchesAsync' function is still $n$ not $n/4$. Although our asynchronous operations can improve our execution time, the worst case time complexity will still be $O(n)$
+
+- resources : https://www.geeksforgeeks.org/javascript-promise-resolve-method/
